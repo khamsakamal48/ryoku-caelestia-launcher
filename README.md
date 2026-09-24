@@ -8,6 +8,8 @@ actions, `=` calc, `?` web, clipboard, files, packages, media...).
 ## Install (on a machine already running Ryoku)
 
 ```bash
+git clone https://github.com/khamsakamal48/ryoku-caelestia-launcher
+cd ryoku-caelestia-launcher
 ./install.sh
 ```
 
@@ -22,6 +24,16 @@ curl -fsSL https://raw.githubusercontent.com/ryoku-dev/ryoku-arch/main/ryoku-she
 ```
 
 Ryoku needs UEFI, so a VM must boot in UEFI mode (e.g. OVMF in virt-manager).
+
+## Update
+
+```bash
+git pull && ./install.sh
+```
+
+The installer is safe to re-run. It copies itself to
+`~/.local/share/caelestia-ryoku` (the copy the pacman hook uses), so a pull
+takes effect only once you run `./install.sh` again.
 
 ## Remove
 

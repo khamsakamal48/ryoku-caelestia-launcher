@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = ryoku-desktop
+
+[Action]
+Description = Re-applying the Caelestia launcher to the updated Ryoku shell...
+When = PostTransaction
+Exec = /usr/bin/runuser -u @USER@ -- /usr/bin/env -u XDG_CONFIG_HOME -u XDG_DATA_HOME HOME=@HOME@ @SCRIPT@ --refresh

@@ -1,0 +1,15 @@
+--- a/FrameMenuManager.qml	2026-09-24 23:23:46.249551427 +0530
++++ b/FrameMenuManager.qml	2026-09-24 23:23:46.265531723 +0530
+@@ -103,7 +103,11 @@
+             { id: "audio", kind: "audio", anchor: "left", minWidth: 300 },
+             // the Super+S capture card: a left-anchored sliding card like the
+             // other rail cards, opened by the screenshot keybind / IPC. Pointer-only.
+-            { id: "screenshot", kind: "screenshot", anchor: "left", minWidth: 300 }
++            { id: "screenshot", kind: "screenshot", anchor: "left", minWidth: 300 },
++            // Caelestia launcher (caelestia-ryoku overlay): grows out of the
++            // bottom border; not in the pointer-only lists, so it is modal and
++            // takes the keyboard.
++            { id: "caelestia-launcher", kind: "caelestia-launcher", anchor: "bottom", minWidth: 600 }
+         );
+         return out;
+     }
